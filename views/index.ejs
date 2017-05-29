@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form class="form-group form1" action='/search-results' method='post'>
+      <input type="text" class="form-control" name="searchTerm" placeholder="Search Twitter">
+      <button type="submit" class="btn btn-primary"> Search </button>
+    </form>
+    <form action='/download' method='get'>
+      <button type="submit" style="display: inline" class="btn btn-warning btn2">Download</button>
+    </form>
+    <div class="results">
+      <ul class="list-group">
+        <% if(locals.results) {%>
+          <% results.forEach(function(result) { %>
+            <li class="list-group-item" style="font-family: 'Lato' !important">
+              <%= result._source.text %>
+            </li>
+          <% }) %>
+        <% } %>
+      </ul>
+   </div>
+  </body>
+</html>

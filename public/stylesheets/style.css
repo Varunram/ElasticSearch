@@ -1,0 +1,43 @@
+h1{
+  color: black;
+  font-family: 'Lato' sans-serif !important;
+  font-size: 50px;
+}
+html{
+  font-family: 'Lato' sans-serif !important;
+  font-size: 50px;
+}
+body{
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FF070B, #E5008D, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FF070B, #E5008D, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #cdcdcd;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.list-group-item{
+  border-radius: 5px;
+  opacity: 0.6;
+  color: black;
+}
+.results{
+  margin-top: 30px;
+}
+.form1{
+  font-size: 17px;
+}
+.btn2{
+  display: inline;
+  position: absolute;
+  top: 129px;
+  left: 105px;
+}
+.btn{
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: 'Lato' sans-serif !important;
+}
+.form1{
+  font-size: 20px;
+}
