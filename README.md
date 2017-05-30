@@ -1,5 +1,5 @@
 # Twitter Scraper
-A nodejs backend for a twitter scraper indexed by elasticsearch
+A nodejs+express backend for a twitter scraper indexed by elasticsearch
 
 ## Getting Started
 
@@ -7,9 +7,9 @@ The logstash files for retrieving the tweets are given in the Logstash conf. Sta
 
 The node front end retrieves only the top 1000 queries from elasticsearch. This can be edited in the config of course.
 
-Remember to ignore the warning `exceeded index limit 1000` nd similar that logstash reports when `logstash.conf` is run.
+Remember to ignore the warning `exceeded index limit 1000` and similar that logstash reports when `logstash.conf` is run.
 
-In short, Do
+In short, run
 ```
 logstash -f logstash.conf
 elasticsearch
