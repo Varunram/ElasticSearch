@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form class="form-group form1" action='/get-clearbit' method='post'>
+      <input type="text" class="form-control" name="searchTerm" placeholder="Search Clearbit">
+      <button type="submit" class="btn btn-primary"> Search </button>
+    </form>
+    <div class="results">
+      <ul class="list-group">
+        <% if(locals.results) {%>
+            <li class="list-group-item" style="font-family: 'Lato' !important">
+              <%= results %>
+            </li>
+        <% } %>
+      </ul>
+   </div>
+  </body>
+</html>
