@@ -8,8 +8,7 @@ var Person = clearbit.Person;
 module.exports.search = function(searchData){
   Person.find({email: searchData.searchTerm})
     .then(function (person) {
-      var name = person.name.fullName;
-      exports.name = name;
+      name = person.name.fullName;
       console.log("EXPORT: ", name);
       // console.log('Name: ', name);
     });
